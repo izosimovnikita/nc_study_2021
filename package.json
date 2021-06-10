@@ -1,0 +1,35 @@
+{
+  "name": "nc_study_2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "start:dev": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izosimovnikita/test.git"
+  },
+  "keywords": [],
+  "author": "NikitaIzosimov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izosimovnikita/test/issues"
+  },
+  "homepage": "https://github.com/izosimovnikita/test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1"
+  }
+}
