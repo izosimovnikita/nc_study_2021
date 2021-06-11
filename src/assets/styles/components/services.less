@@ -1,0 +1,33 @@
+.services {
+  display: inline-block;
+  text-align: center;
+
+  transition: color 0.2s linear;
+
+  &__item-link:hover .service-text {
+    color: #c00;
+  }
+
+  &__item-link:hover .service-icon,
+  &__item-link:hover .more-icon {
+    transform: translateY(-10%);
+  }
+
+  &__item-link:first-child {
+    position: relative;
+  }
+
+  &__item-link:first-child:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+
+    position: absolute;
+    top: 15px;
+    right: -25px;
+
+    background-color: @default-black;
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  &__info {
+    display: flex;
+  }
+
+  &__services {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    width: 100%;
+
+    padding-top: 17px;
+    padding-bottom: 19px;
+  }
+
+  &__advert {
+    height: 120px;
+
+    margin-top: 14px;
+    border: 1px solid #90919d;
+
+    &:hover .text-content__title {
+      color: @active-light-red;
+    }
+  }
+}

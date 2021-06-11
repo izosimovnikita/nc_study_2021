@@ -1,0 +1,53 @@
+.card {
+  border-radius: 8px;
+
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.15s linear;
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+
+    margin-bottom: 4px;
+    border-radius: 7px;
+    padding: 0 8px;
+
+    text-align: center;
+
+    transition: background-color 0.2s linear;
+  }
+
+  &__link._theme-dark:hover {
+    background-color: @regular-light-gray;
+  }
+
+  &__plus {
+    height: 40px;
+  }
+
+  &__switcher {
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
+
+    padding: 7px;
+  }
+
+  &._card-default {
+    width: 180px;
+
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+
+  &._shifted:hover {
+    transform: translateX(-20px);
+  }
+}

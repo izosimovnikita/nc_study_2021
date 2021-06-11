@@ -1,0 +1,17 @@
+.switcher {
+  &__dot {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 1px;
+
+    background-color: @default-black;
+    opacity: 0.2;
+  }
+
+  &__dot:not(:last-child) {
+    margin-right: 5px;
+
+    opacity: 1;
+  }
+}

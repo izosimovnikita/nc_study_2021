@@ -1,0 +1,45 @@
+.cards {
+  &__box {
+    position: relative;
+
+    transition: transform 0.2s linear;
+
+    &._shifted:hover &-box__covid {
+      transform: translateX(-20px);
+    }
+  }
+
+  &__login {
+    height: 132px;
+
+    padding: 5px;
+  }
+
+  &__login .link__add-text:hover {
+    color: @active-light-red;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    z-index: 4;
+
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    fill: @standard-gray;
+
+    opacity: 0;
+
+    &__cross:hover {
+      fill: @default-black;
+    }
+  }
+
+  &__box:hover &__cross {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+}

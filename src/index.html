@@ -1,23 +1,349 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>test heroku</title>
-    <link rel="stylesheet" href="main.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Яндекс</title>
 </head>
 <body class="app">
 
-<svg class="app__icon">
-    <use href="#icon-cloud"></use>
-</svg>
+	<header class="app__header header">
+		<div class="header__wrapper wrapper">
+			<div class="wrapper__content header-content">
+				<a class="header-content__geo-link link" href="#">
+					<svg class="link__icon geo-icon">
+						<use xlink:href="sprite.svg#geo"></use>
+					</svg>
+					<span class="link__text">Москва</span>
+				</a>
+				<time class="header-content__time" datetime="06-06-2021 11:18">6 июня, воскресенье 11:18</time>
+			</div>
 
-<div class="app__svg-store _hidden">
-    <!-- inject:svg -->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cloud" viewBox="0 0 500 550"><path d="M459.1 237.05c0-17.2-3.801-32.5-11.5-45.9h1.9c26.799 0 47.799-21 47.799-47.8 0-24.9-17.199-44-42.1-47.8-7.699-23-28.699-38.2-53.5-38.2-3.799 0-9.6 0-13.4 1.9-9.6-13.4-26.799-21-44-21-32.5 0-57.398 24.9-57.398 57.4v1.9c-11.5 1.9-21 7.6-28.701 17.2-19.1-11.5-42.1-19.1-66.9-19.1-74.6 0-133.9 59.3-133.9 133.9v7.6C23 252.45 0 284.95 0 325.15c0 34.4 17.2 65 44 80.301-3.8 7.699-5.7 15.3-5.7 24.899 0 26.8 21 47.8 47.8 47.8h153c26.801 0 47.801-21 47.801-47.8 0-3.8 0-5.7-1.9-9.6H420.8c53.5 0 95.602-42.101 95.602-95.601.098-40.299-22.902-72.799-57.302-88.099zm-162.6-122.4h15.299c-3.799-5.7-5.699-11.5-5.699-19.1 0-21 17.199-38.2 38.199-38.2 17.201 0 30.602 11.5 36.301 24.9 5.699-3.8 13.4-5.7 21-5.7 21 0 38.199 17.2 38.199 38.2h9.602c15.299 0 28.699 13.4 28.699 28.7 0 15.3-13.4 28.7-28.699 28.7H434.1c-19.1-23-47.801-38.2-80.301-38.2-21 0-38.199 5.7-55.5 15.3-7.699-9.6-15.299-17.2-24.898-24.9 5.898-5.8 13.499-9.7 23.099-9.7zm-57.4 344.301h-153c-15.3 0-28.7-13.4-28.7-28.7s13.4-28.7 28.7-28.7h15.3c-3.8-5.7-5.7-11.5-5.7-19.1 0-21 17.2-38.2 38.2-38.2 17.2 0 30.6 11.5 36.3 24.899 5.7-3.8 13.4-5.699 21-5.699 21 0 38.2 17.199 38.2 38.199h9.6c15.3 0 28.7 13.4 28.7 28.7s-13.3 28.601-28.6 28.601zm181.699-57.401H277.4c-7.602-9.6-19.101-17.2-32.5-19.1-7.6-23-28.7-38.2-53.5-38.2-3.8 0-9.6 0-13.4 1.899-9.6-13.399-26.8-21-44-21-32.5 0-57.4 24.9-57.4 57.4v1.9c-7.7 1.899-13.4 3.8-19.1 7.6-23-13.4-38.2-38.2-38.2-66.9 0-36.3 24.9-66.899 59.3-74.6-1.9-7.7-1.9-13.4-1.9-21 0-63.1 51.6-114.8 114.8-114.8 44 0 84.1 24.9 103.299 63.1 15.301-15.3 36.301-24.9 59.301-24.9 47.801 0 86.1 38.2 86.1 86.1v11.5c32.5 7.6 57.4 38.2 57.4 74.6-.301 42.001-34.7 76.401-76.801 76.401z"/></symbol></svg>
-    <!-- endinject -->
-</div>
+			<div class="wrapper__stuffs stuffs">
+				<a href="#" class="stuffs__link link">
+					<svg class="link__icon truck-icon">
+						<use xlink:href="sprite.svg#truck"></use>
+					</svg>
+				</a>
+				<a href="#" class="stuffs__link link">
+					<svg class="link__icon bell-icon">
+						<use xlink:href="sprite.svg#bell"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+	<main class="app__main main">
+		<div class="main__container container">
+			<section class="container__info info">
+				<div class="info__news news">
+					<div class="news__header news-header">
+						<a class="news-header__link link _main _primary" href="#">Сейчас в СМИ</a>
+						<a class="news-header__link link _main _secondary" href="#">в Москве</a>
+						<svg class="news-header__dots-icon dots-icon _hidden">
+							<use xlink:href="sprite.svg#dots-vert"></use>
+						</svg>
+					</div>
+
+					<div class="news__content news-content">
+						<ul class="news-content__list news-list">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
+									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 1">
+									<span class="link__news">На новом памятнике Александру III нашли неправильный орден</span>
+								</a>
+							</li>
+
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 2">
+									<span class="link__news">В «Яндексе» рассказали о местных словах в разных регионах России</span>
+								</a>
+							</li>
+
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 3">
+									<span class="link__news">Генсек НАТО заявил об обеспокоенности тесным сотрудничеством Москвы и Минска</span>
+								</a>
+							</li>
+
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
+									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 4">
+									<span class="link__news">МВД прописало правила скрытого надзора за дорожным движением</span>
+								</a>
+							</li>
+
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 5">
+									<span class="link__news">В США не исключили использование Россией безответного ядерного удара</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="news__course course">
+						<span class="course__item course-item">
+							<a href="#" class="course-item__valuta link">USD</a>
+							<span class="course-item__value">72,80</span>
+							<span class="course-item__diff">−0,45</span>
+						</span>
+
+						<span class="course__item">
+							<a href="#" class="course-item__valuta link">EUR</a>
+							<span class="course-item__value">88,55</span>
+							<span class="course-item__diff">−0,30</span>
+						</span>
+
+						<span class="course__item">
+							<a href="#" class="course-item__valuta link">НЕФТЬ</a>
+							<span class="course-item__value">71,69</span>
+							<span class="course-item__diff">+0,38%</span>
+						</span>
+
+						<svg class="course__icon dots-icon">
+							<use xlink:href="sprite.svg#dots"></use>
+						</svg>
+					</div>
+				</div>
+
+				<div class="info__circs circs">
+					<div class="circs__widget widget">
+						<div class="widget__header widghet-header">
+							<a class="widget-header__title link _main _primary" href="#">Погода</a>
+							<a class="widghet-header__title link _extra _primary" href="#">Карта осадков</a>
+							<svg class="widghet-header__dots-icon dots-icon _hidden">
+								<use xlink:href="sprite.svg#dots-vert"></use>
+							</svg>
+						</div>
+
+						<div class="widget__content widget-content">
+							<a class="widget-content__link link _alignment" href="#">
+								<span class="link__icon current-icon"></span>
+								<span class="link__temp _large">+22°</span>
+							</a>
+
+							<a class="widget-content__link link" href="#">
+								<span class="link__desc">Днём</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon afternoon-icon"></span>
+									<span class="link-box__temp">23°</span>
+								</div>
+							</a>
+
+							<a class="widget-content__link link" href="#">
+								<span class="link__desc">Вечером</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon evening-icon"></span>
+									<span class="link-box__temp">19°</span>
+								</div>
+							</a>
+
+							<a class="widget-content__link link" href="#">
+								<span class="link__desc">Ночью</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon night-icon"></span>
+									<span class="link-box__temp">15°</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="circs__widget widget">
+						<div class="widget__header widget-header">
+							<a href="#" class="widget-header__title link _main _primary">Пробки</a>
+							<a href="#" class="widget-header__title link _extra _primary">Метро</a>
+							<a href="#" class="widget-header__title link _extra _primary">Расписание</a>
+							<a href="#" class="widget-header__title link _extra _primary">Такси</a>
+							<svg class="widget-header__dots-icon dots-icon _hidden">
+								<use xlink:href="sprite.svg#dots-vert"></use>
+							</svg>
+						</div>
+
+						<div class="widget__content widget-content">
+							<a href="#" class="widget-content__link link _alignment">
+								<svg class="link__icon traffic-icon">
+									<use xlink:href="sprite.svg#traffic"></use>
+								</svg>
+								<span class="link__rate">1</span>
+							</a>
+
+							<a href="#" class="widget-content__text link _extra">
+								<span class="link__text">До 16ч. дороги свободны</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container__services services">
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/1.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Аренда</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/2.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Маркет</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/3.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Видео</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/4.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Картинки</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/5.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Новости</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/6.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Карты</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/7.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Переводчик</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/8.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Музыка</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<img src="/img/services/9.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Программа</div>
+				</a>
+
+				<a href="#" class="services__item-link link">
+					<div class="link__more more-box">
+						<img src="/img/services/box1.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box2.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box3.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box4.svg" class="more-box__icon more-icon" alt="promo">
+					</div>
+
+					<div class="link__text service-text">еще</div>
+				</a>
+			</section>
+
+			<section class="container__search search">
+				<div class="search__logo logo">
+					<a href="#" class="logo__link link">
+						<img class="link__icon logo-img" src="/img/logo.svg" alt="Яндекс">
+					</a>
+				</div>
+
+				<form class="search__form search-form" action="">
+					<div class="search-form__container input-container">
+						<div class="input-container__actions actions">
+							<svg class="actions__icon micro-icon">
+								<use xlink:href="sprite.svg#micro"></use>
+							</svg>
+							<svg class="actions__icon keyboard-icon">
+								<use xlink:href="sprite.svg#keyboard"></use>
+							</svg>
+						</div>
+
+						<input class="input-container__input" type="search" placeholder="Найдётся всё">
+						<button class="input-container__button" type="submit">Найти</button>
+					</div>
+				</form>
+
+				<div class="search__download download">
+					<a href="#" class="download__link link _extra">Скачайте Яндекс.Браузер</a>
+				</div>
+			</section>
+
+			<section class="container__advert advert">
+				<a href="#" class="advert__link link">
+					<div class="link__image"></div>
+
+					<span class="link__inscription">Реклама</span>
+
+					<div class="link__content text-content">
+						<div class="text-content__title">Курс "Специалист по Data Science"</div>
+						<div class="text-content__details">Подробнее на praktikum.yandex.ru</div>
+					</div>
+
+					<svg class="link__icon cross-icon">
+						<use xlink:href="sprite.svg#cross"></use>
+					</svg>
+				</a>
+			</section>
+		</div>
+	</main>
+
+	<aside class="app__cards cards">
+		<div class="cards__login card _card-default">
+			<a href="#" class="card__link link _theme-dark">
+				<svg class="link__icon card-icon">
+					<use xlink:href="sprite.svg#yandex-icon"></use>
+				</svg>
+				<span class="link__card-text">Войти</span>
+			</a>
+
+			<a href="#" class="card__link link">
+				<svg class="link__icon card-icon">
+					<use xlink:href="sprite.svg#inbox"></use>
+				</svg>
+				<span class="link__add-text">Почта</span>
+			</a>
+
+			<a href="#" class="card__link link">
+				<svg class="link__icon card-icon">
+					<use xlink:href="sprite.svg#yandex-disk"></use>
+				</svg>
+				<span class="link__add-text">Диск</span>
+			</a>
+		</div>
+
+		<div class="cards__plus card _card-default _shifted">
+			<a href="#" class="card__link link">
+				<img class="link__icon card-icon" src="/img/yandex-plus.svg" alt="Яндекс Плюс">
+				<span class="link__add-text">Попробовать Плюс</span>
+			</a>
+		</div>
+
+		<div class="cards__box cards-box _shifted">
+			<div class="cards-box__covid card _card-default">
+				<a href="#" class="card__covid-link link">
+					<span class="link__subtitle">Коронавирус в России</span>
+
+					<div class="link__statistics statistics">
+						<span class="statistics__info info-value">
+							<span class="info-value__covid-value">+9145</span>
+							выявлено
+						</span>
+
+						<svg class="statistics__icon covid-icon">
+							<use xlink:href="sprite.svg#covid-histogram"></use>
+						</svg>
+					</div>
+				</a>
+
+				<div class="card__switcher switcher">
+					<div class="switcher__dot"></div>
+					<div class="switcher__dot"></div>
+				</div>
+			</div>
+
+			<svg class="cards__cross" title="Закрыть объявление">
+				<use xlink:href="sprite.svg#cross"></use>
+			</svg>
+		</div>
+	</aside>
 
 </body>
 </html>

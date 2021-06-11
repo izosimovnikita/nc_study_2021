@@ -1,0 +1,118 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: color 0.2s linear;
+
+  &__news {
+    font-size: 13px;
+  }
+
+  &__rate {
+    padding-left: 13px;
+
+    font-size: 26px;
+    color: @default-black;
+
+    transition: color 0.2s linear;
+  }
+
+  &__more {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 36px;
+  }
+
+  &__image {
+    background: url("https://yastatic.net/www/_/O1M3pj157/f169beb3CeL/hAS0GJ_SjB4tydGUKN4uuqnsXxm5TxRDhtR2lEDAjh1QX6fXVnikVUTvlnkMs6Dc7mHFQvj1vv806ntwCdwh2xEVu5PTSUfQ4tbdnaEUqbz-qt4ZqM4GhRTQex8")
+      no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    height: 100%;
+    width: 35%;
+  }
+
+  &__inscription {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 4px 6px 3px 6px;
+    border-bottom-right-radius: 4px;
+
+    font-size: 10px;
+    background-color: @normal-white;
+    color: @default-black;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 65%;
+
+    padding-left: 15px;
+  }
+
+  &__card-text {
+    flex-grow: 1;
+
+    margin-left: -20px;
+
+    font-weight: 500;
+    font-size: 13px;
+    color: @default-black;
+  }
+
+  &__add-text {
+    padding-left: 8px;
+
+    font-weight: 400;
+    font-size: 12px;
+    color: @default-black;
+
+    transition: color 0.2s linear;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: @default-black;
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    color: @active-light-red;
+  }
+
+  &._alignment {
+    display: flex;
+    align-items: center;
+  }
+
+  &._main {
+    font-size: 16px;
+  }
+
+  &._extra {
+    font-size: 13px;
+  }
+
+  &._primary {
+    color: @primary-dark-blue;
+  }
+
+  &._secondary {
+    color: @secondary-light-blue;
+  }
+}
