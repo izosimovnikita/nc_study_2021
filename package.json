@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/izosimovnikita/test.git"
+    "url": "git+https://github.com/izosimovnikita/nc_study_2021.git"
   },
   "keywords": [],
   "author": "NikitaIzosimov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/izosimovnikita/test/issues"
+    "url": "https://github.com/izosimovnikita/nc_study_2021/issues"
   },
-  "homepage": "https://github.com/izosimovnikita/test#readme",
+  "homepage": "https://github.com/izosimovnikita/nc_study_2021#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
