@@ -8,6 +8,11 @@
     font-size: 13px;
   }
 
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
   &__rate {
     padding-left: 13px;
 
@@ -21,7 +26,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    width: 36px;
+    width: 44px;
   }
 
   &__image {
@@ -91,8 +96,20 @@
     justify-content: space-between;
   }
 
-  &:hover {
-    color: @active-light-red;
+  &__desc {
+    display: block;
+
+    font-size: 9px;
+    text-align: center;
+    color: #90919d;
+  }
+
+  &__temp._large {
+    font-size: 26px;
+  }
+
+  &._theme-dark {
+    background-color: @custom-light-gray;
   }
 
   &._alignment {
@@ -114,5 +131,9 @@
 
   &._secondary {
     color: @secondary-light-blue;
+  }
+
+  &:hover {
+    color: @active-light-red;
   }
 }

@@ -1,8 +1,10 @@
 .widget-header {
-	&__title:first-child {
-		font-weight: 500;
-	}
-	&__title + &__title {
-		margin-left: 10px;
-	}
+	&__title {
+      &:first-child {
+        font-weight: 500;
+      }
+      & + & {
+        margin-left: 10px;
+      }
+    }
 }

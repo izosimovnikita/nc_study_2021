@@ -4,6 +4,11 @@
 
     transition: transform 0.2s linear;
 
+    &:hover .cards__cross {
+      opacity: 1;
+      transition: opacity 0.4s linear;
+    }
+
     &._shifted:hover &-box__covid {
       transform: translateX(-20px);
     }
@@ -33,13 +38,8 @@
 
     opacity: 0;
 
-    &__cross:hover {
+    &:hover {
       fill: @default-black;
     }
-  }
-
-  &__box:hover &__cross {
-    opacity: 1;
-    transition-delay: 0.4s;
   }
 }
