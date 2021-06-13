@@ -1,10 +1,11 @@
 .course-item {
+  color: @default-black;
+  font-size: 12px;
+
   &__valuta {
     margin-right: 6px;
 
-    font-weight: 500;
-    font-size: 12px;
-    color: @default-black;
+    font-weight: @font-normal-weight;
 
     transition: color 0.2s linear;
   }
@@ -12,13 +13,9 @@
   &__value {
     margin-right: 4px;
 
-    font-weight: 400;
-    font-size: 12px;
-    color: @default-black;
   }
 
   &__diff {
-    font-size: 12px;
     color: @standard-gray;
   }
 }

@@ -1,10 +1,12 @@
 .widget-content {
-  &__link + &__link {
-    margin-left: 10px;
-  }
+  &__link {
+    & + & {
+      margin-left: 10px;
+    }
 
-  &__link:hover .link__rate {
-    color: @active-light-red;
+    &:hover {
+      color: @active-light-red;
+    }
   }
 
   &__text {

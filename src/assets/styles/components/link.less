@@ -5,7 +5,7 @@
   transition: color 0.2s linear;
 
   &__text {
-    font-size: 13px;
+    font-size: @font-normal-size;
   }
 
   &__box {
@@ -16,12 +16,9 @@
   }
 
   &__value {
-    padding-left: 13px;
+    padding-left: 10px;
 
-    font-size: 26px;
-    color: @default-black;
-
-    transition: color 0.2s linear;
+    font-size: @font-normal-size;
   }
 
   &__image {
@@ -62,8 +59,8 @@
 
     margin-left: -20px;
 
-    font-weight: 500;
-    font-size: 13px;
+    font-weight: @font-normal-weight;
+    font-size: @font-normal-size;
     color: @default-black;
   }
 
@@ -82,7 +79,7 @@
     margin-bottom: 7px;
 
     font-size: 12px;
-    font-weight: 500;
+    font-weight: @font-normal-weight;
     color: @default-black;
   }
 
@@ -94,8 +91,8 @@
     color: @standard-gray;
   }
 
-  &__temp._large {
-    font-size: 26px;
+  &__value._large {
+    font-size: @font-big-size;
   }
 
   &._theme-dark {
@@ -108,11 +105,11 @@
   }
 
   &._main {
-    font-size: 16px;
+    font-size: @font-regular-size;
   }
 
   &._extra {
-    font-size: 13px;
+    font-size: @font-normal-size;
   }
 
   &._primary {

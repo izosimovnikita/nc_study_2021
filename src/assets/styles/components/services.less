@@ -3,30 +3,34 @@
 
   transition: color 0.2s linear;
 
-  &__item-link:hover .service-text {
-    color: @active-light-red;
-  }
+  &__item-link {
+    color: @default-black;
 
-  &__item-link:hover .service-icon,
-  &__item-link:hover .more-icon {
-    transform: translateY(-10%);
-  }
+    &:hover {
+      color: @active-light-red;
 
-  &__item-link:first-child {
-    position: relative;
-  }
+      & .service-icon,
+      & .service-icon {
+        transform: translateY(-10%);
+      }
+    }
 
-  &__item-link:first-child:after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
+    &:first-child {
+      position: relative;
 
-    position: absolute;
-    top: 15px;
-    right: -25px;
+      &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 30px;
 
-    background-color: @default-black;
-    opacity: 0.1;
+        position: absolute;
+        top: 15px;
+        right: -25px;
+
+        background-color: @default-black;
+        opacity: 0.1;
+      }
+    }
   }
 }
