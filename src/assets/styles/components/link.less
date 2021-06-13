@@ -4,29 +4,24 @@
 
   transition: color 0.2s linear;
 
-  &__news {
+  &__text {
     font-size: 13px;
   }
 
   &__box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  &__rate {
+  &__value {
     padding-left: 13px;
 
     font-size: 26px;
     color: @default-black;
 
     transition: color 0.2s linear;
-  }
-
-  &__more {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: 44px;
   }
 
   &__image {
@@ -91,17 +86,12 @@
     color: @default-black;
   }
 
-  &__statistics {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__desc {
+  &__title {
     display: block;
 
     font-size: 9px;
     text-align: center;
-    color: #90919d;
+    color: @standard-gray;
   }
 
   &__temp._large {
