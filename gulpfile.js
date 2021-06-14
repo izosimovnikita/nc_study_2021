@@ -48,7 +48,7 @@ gulp.task("less", function () {
 				cascade: false,
 			})
 		)
-        .pipe(replace("../../fonts", "src/fonts"))
+        .pipe(replace("../../fonts", "src/assets/fonts"))
 		.pipe(dest("./dist"));
 });
 
@@ -56,9 +56,13 @@ gulp.task("html", function () {
 	return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
 });
 
+gulp.task("js", function () {
+	return gulp.src("./src/assets/js/**/*.js").pipe(gulp.dest("./dist/src/assets/js"));
+});
+
 gulp.task("fonts", function () {
     return gulp.src("./src/assets/fonts/**")
-        .pipe(dest("./dist/src/fonts"))
+        .pipe(dest("./dist/src/assets/fonts"))
 })
 
 gulp.task("serve", function () {
@@ -75,6 +79,6 @@ gulp.task("serve", function () {
 	gulp.watch("./dist/index.html").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("svgstore", "less", "html", "fonts"));
+gulp.task("build", series("svgstore", "less", "html", "js", "fonts"));
 
-gulp.task("default", series("svgstore", parallel("html", "less", "fonts"), "serve"));
+gulp.task("default", series("svgstore", parallel("html", "less", "js", "fonts"), "serve"));
