@@ -57,7 +57,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("js", function () {
-	return gulp.src("./src/assets/js/**/*.js").pipe(gulp.dest("./dist/src/assets/js"));
+	return gulp.src("./src/assets/js/**/*.js").pipe(gulp.dest("./dist"));
 });
 
 gulp.task("fonts", function () {
@@ -75,7 +75,7 @@ gulp.task("serve", function () {
 	gulp.watch("./src/assets/styles/**/*.less").on("change", series("less"));
 	gulp.watch("./src/index.html").on("change", series("html"));
 
-	gulp.watch("./dist/style.css").on("change", browserSync.reload);
+	gulp.watch("./dist/main.css").on("change", browserSync.reload);
 	gulp.watch("./dist/index.html").on("change", browserSync.reload);
 });
 
