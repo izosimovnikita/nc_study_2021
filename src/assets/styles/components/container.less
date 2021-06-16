@@ -1,5 +1,5 @@
 .container {
-  width: @content-width;
+  width: @content-normal-width;
 
   padding: 1px 10px;
   margin: 0 auto;
@@ -26,6 +26,12 @@
 
     &:hover {
       color: @active-light-red;
+    }
+  }
+
+  @media (max-width: 1299px) {
+    & {
+      width: @content-small-width;
     }
   }
 }
