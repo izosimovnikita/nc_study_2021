@@ -3,25 +3,16 @@
     position: relative;
 
     transition: transform 0.2s linear;
-
-    &:hover .cards__cross {
-      opacity: 1;
-      transition: opacity 0.4s linear;
-    }
-
-    &._shifted:hover &-box__covid {
-      transform: translateX(-20px);
-    }
   }
 
   &__login {
     height: 132px;
 
     padding: 5px;
-  }
 
-  &__login .link__add-text:hover {
-    color: @active-light-red;
+    & .link__add-text:hover {
+      color: @active-light-red;
+    }
   }
 
   &__cross {
@@ -35,6 +26,12 @@
     fill: @standard-gray;
 
     opacity: 0;
+
+    &._shown {
+      opacity: 1;
+
+      transition: opacity .4s linear .4s;
+    }
 
     &:hover {
       fill: @default-black;

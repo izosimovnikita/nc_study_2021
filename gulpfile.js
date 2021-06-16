@@ -74,9 +74,12 @@ gulp.task("serve", function () {
 
 	gulp.watch("./src/assets/styles/**/*.less").on("change", series("less"));
 	gulp.watch("./src/index.html").on("change", series("html"));
+	gulp.watch("./src/assets/js/**/*.js").on("change", series("js"));
+
 
 	gulp.watch("./dist/main.css").on("change", browserSync.reload);
 	gulp.watch("./dist/index.html").on("change", browserSync.reload);
+    gulp.watch("./dist/main.js").on("change", browserSync.reload);
 });
 
 gulp.task("build", series("svgstore", "less", "html", "js", "fonts"));
