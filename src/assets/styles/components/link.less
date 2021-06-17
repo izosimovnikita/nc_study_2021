@@ -5,7 +5,11 @@
   transition: color 0.2s linear;
 
   &__text {
-    font-size: @font-normal-size;
+    .font-type(13px; 400; normal);
+  }
+
+  &__info {
+    .font-type(12px; 400; normal);
   }
 
   &__box {
@@ -26,8 +30,7 @@
       no-repeat;
     background-size: cover;
     background-position-y: top;
-    height: 100%;
-    width: 35%;
+    .icon-size(35%; 100%);
   }
 
   &__inscription {
@@ -38,9 +41,9 @@
     padding: 4px 6px 3px 6px;
     border-bottom-right-radius: 4px;
 
-    font-size: 10px;
-    background-color: @normal-white;
+    .font-type(10px; 400; normal);
     color: @default-black;
+    background-color: @normal-white;
   }
 
   &__content {
@@ -67,8 +70,7 @@
   &__add-text {
     padding-left: 8px;
 
-    font-weight: 400;
-    font-size: 12px;
+    .font-type(12px; 400; normal);
     color: @default-black;
 
     transition: color 0.2s linear;
@@ -78,15 +80,14 @@
     display: block;
     margin-bottom: 7px;
 
-    font-size: 12px;
-    font-weight: @font-normal-weight;
+    .font-type(12px; 500; normal);
     color: @default-black;
   }
 
   &__title {
     display: block;
 
-    font-size: 9px;
+    .font-type(9px; 400; normal);
     text-align: center;
     color: @standard-gray;
   }

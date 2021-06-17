@@ -1,7 +1,7 @@
 .card {
   border-radius: 8px;
 
-  box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 32px @additional-light-black;
 
   transition: transform 0.15s linear;
 
@@ -35,7 +35,7 @@
     position: absolute;
     top: 2px;
     right: 2px;
-    z-index: 1;
+    z-index: @zindex-switcher;
 
     padding: 7px;
   }

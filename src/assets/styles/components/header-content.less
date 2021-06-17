@@ -3,8 +3,8 @@
     display: flex;
     align-items: baseline;
 
-    font-weight: @font-bold-weight;
     color: @standard-gray;
+    .font-type(12px; 600; normal);
 
     &:hover {
       color: @active-light-red;
@@ -16,8 +16,8 @@
   }
 
   &__time {
+    .font-type(11px; 400; normal);
     font-family: @font-family-secondary;
-    font-size: @font-small-size;
     color: @standard-gray;
   }
 }
