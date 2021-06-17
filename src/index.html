@@ -18,7 +18,8 @@
 					</svg>
 					<span class="link__text">Москва</span>
 				</a>
-				<time class="header-content__time" datetime="06-06-2021 11:18">6 июня, воскресенье 11:18</time>
+				<time class="header-content__time time" datetime="06-06-2021 11:18">6 июня,
+                    воскресенье <a class="time__day link" href="#">11:18</a></time>
 			</div>
 
 			<div class="wrapper__stuffs stuffs">
@@ -286,6 +287,9 @@
 
 				<form class="search__form search-form" action="">
 					<div class="search-form__container input-container">
+                        <input class="input-container__input" type="search" placeholder="Найдётся всё">
+                        <button class="input-container__button" type="submit">Найти</button>
+
 						<div class="input-container__actions actions">
 							<svg class="actions__icon micro-icon">
 								<use href="#icon-micro"></use>
@@ -294,9 +298,6 @@
 								<use href="#icon-keyboard"></use>
 							</svg>
 						</div>
-
-						<input class="input-container__input" type="search" placeholder="Найдётся всё">
-						<button class="input-container__button" type="submit">Найти</button>
 					</div>
 				</form>
 

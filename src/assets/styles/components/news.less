@@ -1,12 +1,16 @@
 .news {
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
   &__header,
   &__content {
     margin-bottom: 8px;
   }
 
   .news-icon {
-    width: 14px;
-    height: 14px;
+    .icon-size(14px; 14px);
 
     margin-right: 10px;
   }

@@ -30,3 +30,18 @@ close.addEventListener("click", function() {
     cardsBox.addEventListener("mouseover", mouseover);
     cardsBox.addEventListener("mouseout", mouseout);
 })
+
+
+const input = document.querySelector(".input-container__input");
+const actions = document.querySelector("input ~ div");
+
+input.addEventListener("focus", function () {
+    actions.style.opacity = "0";
+})
+
+input.addEventListener("blur", function () {
+    if (input.value.length > 0) {
+        actions.style.opacity = "0";
+    } else actions.style.opacity = "1";
+})
+
