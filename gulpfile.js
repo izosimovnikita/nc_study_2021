@@ -8,7 +8,8 @@ const gulp = require("gulp"),
 	less = require("gulp-less"),
 	autoprefixer = require("gulp-autoprefixer"),
 	replace = require("gulp-replace"),
-	browserSync = require("browser-sync").create();
+	browserSync = require("browser-sync").create(),
+	mergeStream = require("merge-stream");
 
 gulp.task("svgstore", function () {
 	const svgs = gulp
@@ -34,10 +35,21 @@ gulp.task("svgstore", function () {
 		return file.contents.toString();
 	}
 
-	return gulp
-		.src("./src/index.html")
-		.pipe(inject(svgs, {transform: fileContents}))
-		.pipe(gulp.dest("./src"));
+	return mergeStream(
+		gulp
+			.src("./src/index.html")
+			.pipe(inject(svgs, {transform: fileContents}))
+			.pipe(gulp.dest("./src")),
+
+		gulp
+			.src("./src/ya-index.html")
+			.pipe(inject(svgs, {transform: fileContents}))
+			.pipe(gulp.dest("./src")),
+
+		gulp
+			.src("./src/ma-index.html")
+			.pipe(inject(svgs, {transform: fileContents}))
+			.pipe(gulp.dest("./src")));
 });
 
 gulp.task("less", function () {
@@ -53,7 +65,19 @@ gulp.task("less", function () {
 });
 
 gulp.task("html", function () {
-	return gulp.src(["./src/index.html", "./src/ma-index.html"]).pipe(gulp.dest("./dist"));
+	return mergeStream(
+		gulp
+			.src("./src/index.html")
+			.pipe(gulp.dest("./dist")),
+
+		gulp
+			.src("./src/ya-index.html")
+			.pipe(gulp.dest("./dist")),
+
+		gulp
+			.src("./src/ma-index.html")
+			.pipe(gulp.dest("./dist"))
+	);
 });
 
 gulp.task("js", function () {
@@ -74,14 +98,21 @@ gulp.task("serve", function () {
 
 	gulp.watch("./src/assets/styles/**/*.less").on("change", series("less"));
 	gulp.watch("./src/index.html").on("change", series("html"));
+	gulp.watch("./src/ya-index.html").on("change", series("html"));
+	gulp.watch("./src/ma-index.html").on("change", series("html"));
 	gulp.watch("./src/assets/js/**/*.js").on("change", series("js"));
-
 
 	gulp.watch("./dist/main.css").on("change", browserSync.reload);
 	gulp.watch("./dist/index.html").on("change", browserSync.reload);
+	gulp.watch("./dist/ya-index.html").on("change", browserSync.reload);
+	gulp.watch("./dist/ma-index.html").on("change", browserSync.reload);
     gulp.watch("./dist/main.js").on("change", browserSync.reload);
 });
 
 gulp.task("build", series("svgstore", "less", "html", "js", "fonts"));
 
 gulp.task("default", series("svgstore", parallel("html", "less", "js", "fonts"), "serve"));
+
+
+
+
