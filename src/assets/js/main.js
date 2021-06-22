@@ -1,6 +1,7 @@
-const cardsBox = document.querySelector(".cards__box");
-const cardsCovid = cardsBox.querySelector(".cards-box__covid");
-const close = document.querySelector(".cards__cross");
+// Notification
+const cardsBox = document.querySelector(".ya-cards__box");
+const cardsCovid = cardsBox.querySelector(".ya-cards-box__covid");
+const close = document.querySelector(".ya-cards__cross");
 
 function mouseover() {
     cardsCovid.classList.add("_fixed");
@@ -32,6 +33,7 @@ close.addEventListener("click", function() {
 })
 
 
+// Input
 const input = document.querySelector(".input-container__input");
 const actions = document.querySelector("input ~ div");
 

@@ -53,7 +53,7 @@ gulp.task("less", function () {
 });
 
 gulp.task("html", function () {
-	return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
+	return gulp.src(["./src/index.html", "./src/ma-index.html"]).pipe(gulp.dest("./dist"));
 });
 
 gulp.task("js", function () {

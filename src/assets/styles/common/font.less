@@ -1,34 +1,43 @@
 // подключаем шрифт через font-face
-.font-face(@font-family, @font-path-1, @font-path-2, @font-path-3, @font-weight, @font-style, @font-display) {
-  font-family: @font-family;
-  src: url(@font-path-1) format("woff2"),
-  url(@font-path-2) format("woff"),
-  url(@font-path-3) format("ttf");
-  font-weight: @font-weight;
-  font-style: @font-style;
-  font-display: @font-display;
-}
+.font-face(@font-family; @font-path-1; @font-path-2; @font-path-3; @font-weight; @font-style; @font-display) {
+    @font-face {
+        font-family: @font-family;
+        src: url(@font-path-1) format("woff2"),
+        url(@font-path-2) format("woff"),
+        url(@font-path-3) format("ttf");
+        font-weight: @font-weight;
+        font-style: @font-style;
+        font-display: @font-display;
+    }
+};
 
-.font-face(@font-family-main,
-        "../../fonts/YSText/YandexSansText-Regular.woff2",
-        "../../fonts/YSText/YandexSansText-Regular.woff",
-        "../../fonts/YSText/YandexSansText-Regular.ttf",
-        @font-standard-weight,
-        normal,
-        swap);
+.font-face(
+    @font-family-main,
+    "../../fonts/YSText/YandexSansText-Regular.woff2",
+    "../../fonts/YSText/YandexSansText-Regular.woff",
+    "../../fonts/YSText/YandexSansText-Regular.ttf",
+    @font-standard-weight,
+    normal,
+    swap
+);
 
-.font-face(@font-family-main,
-        "../../fonts/YSText/YandexSansText-Medium.woff2",
-        "../../fonts/YSText/YandexSansText-Medium.woff",
-        "../../fonts/YSText/YandexSansText-Medium.ttf",
-        @font-normal-weight,
-        normal,
-        swap);
+.font-face(
+    @font-family-main,
+    "../../fonts/YSText/YandexSansText-Medium.woff2",
+    "../../fonts/YSText/YandexSansText-Medium.woff",
+    "../../fonts/YSText/YandexSansText-Medium.ttf",
+    @font-normal-weight,
+    normal,
+    swap
+);
 
-.font-face(@font-family-main,
-        "../../fonts/YSText/YandexSansText-Bold.woff2",
-        "../../fonts/YSText/YandexSansText-Bold.woff",
-        "../../fonts/YSText/YandexSansText-Bold.ttf",
-        @font-bold-weight,
-        normal,
-        swap);
+.font-face(
+    @font-family-main,
+    "../../fonts/YSText/YandexSansText-Bold.woff2",
+    "../../fonts/YSText/YandexSansText-Bold.woff",
+    "../../fonts/YSText/YandexSansText-Bold.ttf",
+    @font-bold-weight,
+    normal,
+    swap
+);
+

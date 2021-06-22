@@ -1,0 +1,55 @@
+.header-content {
+  .geo-icon {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+
+    .icon-size(14px; 14px);
+
+    margin-right: 8px;
+
+    fill: @standard-gray;
+    vertical-align: middle;
+
+    transition: fill .2s linear;
+  }
+
+  &__geo-link {
+    display: flex;
+    align-items: baseline;
+
+    color: @standard-gray;
+    .font-type(12px; 600; normal);
+
+    &:hover {
+      color: @active-light-red;
+    }
+
+    &:hover .geo-icon {
+      fill: @active-light-red;
+    }
+  }
+
+  &__time {
+    .font-type(11px; 400; normal);
+    font-family: @font-family-secondary;
+    color: @standard-gray;
+  }
+}
+
+.bell-icon {
+  .icon-size(36px; 36px);
+
+  opacity: 0.3;
+}
+
+.truck-icon {
+  .icon-size(36px; 22px);
+
+  opacity: 0.3;
+}
+
+.truck-icon:hover,
+.bell-icon:hover {
+  opacity: 0.2;
+}
