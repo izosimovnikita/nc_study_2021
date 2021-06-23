@@ -19,6 +19,17 @@
     flex-wrap: wrap;
   }
 
+  &__ma-box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__weather-box {
+    display: flex;
+    align-items: center;
+  }
+
   &__value {
     padding-left: 10px;
 
@@ -90,6 +101,14 @@
     .font-type(9px; 400; normal);
     text-align: center;
     color: @standard-gray;
+  }
+
+  &__temp {
+    margin: 0 12px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: @text-light-gray;
   }
 
   &__value._large {

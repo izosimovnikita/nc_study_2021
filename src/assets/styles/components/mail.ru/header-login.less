@@ -1,0 +1,24 @@
+.header-login {
+    position: relative;
+
+    &__extension {
+        display: block;
+        position: absolute;
+        bottom: 5px;
+
+        opacity: 0;
+
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: @normal-white;
+        font-size: 10px;
+        font-weight: 700;
+        text-align: center;
+
+        transition: opacity .3s ease-in-out;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

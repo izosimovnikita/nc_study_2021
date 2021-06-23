@@ -1,0 +1,45 @@
+.card-footer {
+    & > button {
+        width: 100%;
+    }
+
+    &__create {
+        margin-bottom: 8px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+
+        font-size: 13px;
+        color: @main-blue;
+        background-color: @bg-light-gray;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(@bg-light-gray, 3%);
+        }
+    }
+
+    &__connect {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+
+        color: @normal-white;
+        background-color: @vk-blue;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(@vk-blue, 3%);
+        }
+
+        & .vk-icon {
+            margin-right: 5px;
+        }
+    }
+}
