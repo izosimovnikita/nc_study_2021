@@ -5,11 +5,11 @@
   transition: color 0.2s linear;
 
   &__text {
-    .font-type(13px; 400; normal);
+    .ya-font-regular();
   }
 
   &__info {
-    .font-type(12px; 400; normal);
+    .ya-font-standard();
   }
 
   &__box {
@@ -33,7 +33,7 @@
   &__value {
     padding-left: 10px;
 
-    font-size: @font-normal-size;
+    font-size: @ya-font-regular-size;
   }
 
   &__image {
@@ -52,7 +52,7 @@
     padding: 4px 6px 3px 6px;
     border-bottom-right-radius: 4px;
 
-    .font-type(10px; 400; normal);
+    font-size: @ya-font-smallest-size;
     color: @default-black;
     background-color: @normal-white;
   }
@@ -73,15 +73,14 @@
 
     margin-left: -20px;
 
-    font-weight: @font-normal-weight;
-    font-size: @font-normal-size;
+    .ya-font-regular-medium();
     color: @default-black;
   }
 
   &__add-text {
     padding-left: 8px;
 
-    .font-type(12px; 400; normal);
+    .ya-font-standard();
     color: @default-black;
 
     transition: color 0.2s linear;
@@ -91,14 +90,14 @@
     display: block;
     margin-bottom: 7px;
 
-    .font-type(12px; 500; normal);
+    .ya-font-standard-medium();
     color: @default-black;
   }
 
   &__title {
     display: block;
 
-    .font-type(9px; 400; normal);
+    font-size: @ya-font-petty-size;
     text-align: center;
     color: @standard-gray;
   }
@@ -112,7 +111,7 @@
   }
 
   &__value._large {
-    font-size: @font-big-size;
+    font-size: @ya-font-large-size;
   }
 
   &._theme-dark {
@@ -125,11 +124,11 @@
   }
 
   &._main {
-    font-size: @font-regular-size;
+    font-size: @ya-font-medium-size;
   }
 
   &._extra {
-    font-size: @font-normal-size;
+    font-size: @ya-font-regular-size;
   }
 
   &._primary {

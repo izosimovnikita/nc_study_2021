@@ -1,0 +1,88 @@
+// задаем основные параметры шрифта в виде миксинов и переменных
+
+@ya-font-family-main: "YS Text";
+@ya-font-family-secondary: Verdana, sans-serif;
+
+@ya-font-petty-size: 9px;
+@ya-font-smallest-size: 10px;
+@ya-font-small-size: 11px;
+@ya-font-normal-size: 12px;
+@ya-font-regular-size: 13px;
+@ya-font-medium-size: 16px;
+@ya-font-large-size: 26px;
+
+@ya-font-regular-weight: 400;
+@ya-font-medium-weight: 500;
+@ya-font-bold-weight: 600;
+
+@ya-font-normal-style: normal;
+
+.ya-font-base() {
+    font-family: @ya-font-family-main;
+    font-weight: @ya-font-regular-weight;
+    font-style: normal;
+    font-size: @ya-font-regular-size;
+}
+
+.ya-font-standard() {
+    .ya-font-base();
+    font-size: @ya-font-normal-size;
+    font-weight: @ya-font-regular-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-standard-medium() {
+    .ya-font-base();
+    font-size: @ya-font-normal-size;
+    font-weight: @ya-font-medium-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-standard-bold() {
+    .ya-font-base();
+    font-size: @ya-font-normal-size;
+    font-weight: @ya-font-bold-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-regular() {
+    .ya-font-base();
+    font-size: @ya-font-regular-size;
+    font-weight: @ya-font-regular-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-regular-medium() {
+    .ya-font-base();
+    font-size: @ya-font-regular-size;
+    font-weight: @ya-font-medium-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-primary() {
+    .ya-font-base();
+    font-size: @ya-font-medium-size;
+    font-weight: @ya-font-regular-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-primary-medium() {
+    .ya-font-base();
+    font-size: @ya-font-medium-size;
+    font-weight: @ya-font-medium-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-large() {
+    .ya-font-base();
+    font-size: @ya-font-large-size;
+    font-weight: @ya-font-regular-weight;
+    font-style: @ya-font-normal-style;
+}
+
+.ya-font-large-bold() {
+    .ya-font-base();
+    font-size: @ya-font-large-size;
+    font-weight: @ya-font-medium-weight;
+    font-style: @ya-font-normal-style;
+}
