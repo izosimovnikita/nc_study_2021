@@ -1,6 +1,16 @@
 .ma-valuta-info {
+    &__diff {
+        display: flex;
+        align-items: center;
+
+        .ma-font-petty();
+        color: @rate-red;
+    }
+
     &__value {
-        font-size: 15px;
+        margin-bottom: 2px;
+
+        .ma-font-regular();
         color: @text-light-gray;
     }
 }

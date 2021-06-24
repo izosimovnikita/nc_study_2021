@@ -1,0 +1,19 @@
+.ma-tabs {
+    &__link {
+        padding: 0 10px;
+
+        line-height: 30px;
+
+        &:first-child {
+            padding-left: 0;
+            border-bottom: 2px solid @main-blue;
+
+            .ma-font-regular-bolder();
+            color: @main-blue;
+        }
+
+        &:not(:first-child):hover {
+            border-bottom: 2px solid lighten(@add-black, 70%);
+        }
+    }
+}

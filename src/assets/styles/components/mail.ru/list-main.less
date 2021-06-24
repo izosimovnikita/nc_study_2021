@@ -1,0 +1,13 @@
+.list-main {
+    .ma-font-regular();
+
+    &__item {
+        &:first-child {
+            .ma-font-regular-bolder();
+        }
+
+        & + & {
+            margin-left: 24px;
+        }
+    }
+}

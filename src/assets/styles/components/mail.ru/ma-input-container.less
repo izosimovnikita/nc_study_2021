@@ -1,0 +1,45 @@
+.ma-input-container {
+    position: relative;
+
+    &__input {
+        display: inline-block;
+        width: calc(100% - 107px);
+
+        height: 38px;
+        padding: 0 9px 0 40px;
+        border: 2px solid @brand-orange;
+        border-radius: 8px 0 0 8px;
+
+        outline: none;
+
+        &:hover {
+            border: 3px solid @brand-orange;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        transform: translateY(-50%);
+
+        cursor: pointer;
+    }
+
+    &__button {
+        width: 107px;
+        height: 38px;
+
+        margin-left: -7px;
+        border: 2px solid @brand-orange;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+
+        font-size: @ma-font-btn-size;
+
+        color: @normal-white;
+        background-color: @brand-orange;
+        outline: none;
+        cursor: pointer;
+    }
+}

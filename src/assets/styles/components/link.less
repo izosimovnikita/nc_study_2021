@@ -25,6 +25,13 @@
     flex-direction: column;
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 12px;
+  }
+
   &__weather-box {
     display: flex;
     align-items: center;
@@ -36,12 +43,39 @@
     font-size: @ya-font-regular-size;
   }
 
+  &__label {
+    margin-right: 7px;
+
+    .ma-font-petty-bolder();
+    color: @text-light-gray;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__desc {
+    color: @main-blue;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__image {
     background: url("https://yastatic.net/www/_/O1M3pj157/f169beb3CeL/hAS0GJ_SjB4tydGUKN4uuqnsXxm5TxRDhtR2lEDAjh1QX6fXVnikVUTvlnkMs6Dc7mHFQvj1vv806ntwCdwh2xEVu5PTSUfQ4tbdnaEUqbz-qt4ZqM4GhRTQex8")
       no-repeat;
     background-size: cover;
     background-position-y: top;
     .icon-size(35%; 100%);
+  }
+
+  &__news-image {
+    background: url("https://r.mradx.net/pictures/5B/A9F2AC.jpg");
+    background-size: cover;
+    .icon-size(64px; 48px);
+
+    border-radius: 5px;
   }
 
   &__inscription {
@@ -105,8 +139,7 @@
   &__temp {
     margin: 0 12px;
 
-    font-size: 24px;
-    font-weight: 700;
+    .ma-font-big();
     color: @text-light-gray;
   }
 

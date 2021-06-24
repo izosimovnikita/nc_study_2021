@@ -1,3 +1,64 @@
 @ma-font-family-main: Helvetica, Arial, sans-serif;
+@ma-font-family-secondary: Arial, sans-serif;
 
+@ma-font-petty-size: 11px;
+@ma-font-secondary-size: 13px;
+@ma-font-main-size: 15px;
+@ma-font-btn-size: 17px;
 @ma-font-big-size: 24px;
+
+@ma-font-regular-weight: 400;
+@ma-font-medium-weight: 500;
+@ma-font-bold-weight: 600;
+@ma-font-bolder-weight: 700;
+
+@ma-font-normal-style: normal;
+
+.ma-font-base() {
+    font-family: @ma-font-family-main;
+    font-size: @ma-font-main-size;
+    font-weight: @ma-font-regular-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-petty() {
+    .ma-font-base();
+    font-size: @ma-font-petty-size;
+    font-weight: @ma-font-regular-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-petty-bolder() {
+    .ma-font-base();
+    font-size: @ma-font-petty-size;
+    font-weight: @ma-font-bolder-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-secondary() {
+    .ma-font-base();
+    font-size: @ma-font-secondary-size;
+    font-weight: @ma-font-regular-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-regular() {
+    .ma-font-base();
+    font-size: @ma-font-main-size;
+    font-weight: @ma-font-regular-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-regular-bolder() {
+    .ma-font-base();
+    font-size: @ma-font-main-size;
+    font-weight: @ma-font-bolder-weight;
+    font-style: @ma-font-normal-style;
+}
+
+.ma-font-big() {
+    .ma-font-base();
+    font-size: @ma-font-big-size;
+    font-weight: @ma-font-bolder-weight;
+    font-style: @ma-font-normal-style;
+}
