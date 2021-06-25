@@ -101,12 +101,14 @@ gulp.task("serve", function () {
 	gulp.watch("./src/ya-index.html").on("change", series("html"));
 	gulp.watch("./src/ma-index.html").on("change", series("html"));
 	gulp.watch("./src/assets/js/**/*.js").on("change", series("js"));
+	gulp.watch("./src/assets/icons/**/*.svg").on("change", series("svgstore"));
 
 	gulp.watch("./dist/main.css").on("change", browserSync.reload);
 	gulp.watch("./dist/index.html").on("change", browserSync.reload);
 	gulp.watch("./dist/ya-index.html").on("change", browserSync.reload);
 	gulp.watch("./dist/ma-index.html").on("change", browserSync.reload);
     gulp.watch("./dist/main.js").on("change", browserSync.reload);
+	gulp.watch("./src/assets/icons/**/*.svg").on("change", browserSync.reload);
 });
 
 gulp.task("build", series("svgstore", "less", "html", "js", "fonts"));
