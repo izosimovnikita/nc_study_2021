@@ -47,7 +47,7 @@
     margin-right: 7px;
 
     .ma-font-petty-bolder();
-    color: @text-light-gray;
+    color: @ma-text-light-gray;
     
     &:hover {
       text-decoration: underline;
@@ -55,7 +55,7 @@
   }
 
   &__desc {
-    color: @main-blue;
+    color: @ma-main-blue;
     
     &:hover {
       text-decoration: underline;
@@ -87,7 +87,7 @@
     border-bottom-right-radius: 4px;
 
     font-size: @ya-font-smallest-size;
-    color: @default-black;
+    color: @ya-default-black;
     background-color: @normal-white;
   }
 
@@ -108,14 +108,14 @@
     margin-left: -20px;
 
     .ya-font-regular-medium();
-    color: @default-black;
+    color: @ya-default-black;
   }
 
   &__add-text {
     padding-left: 8px;
 
     .ya-font-standard();
-    color: @default-black;
+    color: @ya-default-black;
 
     transition: color 0.2s linear;
   }
@@ -125,7 +125,7 @@
     margin-bottom: 7px;
 
     .ya-font-standard-medium();
-    color: @default-black;
+    color: @ya-default-black;
   }
 
   &__title {
@@ -133,14 +133,14 @@
 
     font-size: @ya-font-petty-size;
     text-align: center;
-    color: @standard-gray;
+    color: @ya-standard-gray;
   }
 
   &__temp {
     margin: 0 12px;
 
     .ma-font-big();
-    color: @text-light-gray;
+    color: @ma-text-light-gray;
   }
 
   &__value._large {
@@ -148,7 +148,7 @@
   }
 
   &._theme-dark {
-    background-color: @custom-light-gray;
+    background-color: @ya-custom-light-gray;
   }
 
   &._alignment {
@@ -165,18 +165,22 @@
   }
 
   &._primary {
-    color: @primary-dark-blue;
+    color: @ya-primary-dark-blue;
   }
 
   &._secondary {
-    color: @secondary-light-blue;
+    color: @ya-secondary-light-blue;
   }
 
   &._ya-caused:hover {
-    color: @active-light-red;
+    color: @ya-active-light-red;
   }
 
   &._ma-caused:hover {
     text-decoration: underline;
+  }
+
+  &__search {
+    color: @ma-main-blue;
   }
 }

@@ -8,13 +8,15 @@
         border-radius: 8px;
 
         .ma-font-secondary();
-        color: @main-blue;
-        background-color: @bg-light-gray;
+        color: @ma-main-blue;
+        background-color: @ma-bg-light-gray;
 
         cursor: pointer;
+        outline: none;
 
-        &:hover {
-            background-color: darken(@bg-light-gray, 3%);
+        &:hover,
+        &:focus {
+            background-color: darken(@ma-bg-light-gray, 3%);
         }
     }
 
@@ -30,12 +32,14 @@
         border-radius: 8px;
 
         color: @normal-white;
-        background-color: @vk-blue;
+        background-color: @ma-vk-blue;
 
         cursor: pointer;
+        outline: none;
 
-        &:hover {
-            background-color: darken(@vk-blue, 3%);
+        &:hover,
+        &:focus {
+            background-color: darken(@ma-vk-blue, 3%);
         }
 
         & .vk-icon {

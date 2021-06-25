@@ -1,7 +1,13 @@
 .ma-card {
     border-radius: 8px;
 
-    box-shadow: 0 4px 12px @shadow-light-black;
+    box-shadow: 0 4px 12px @ma-shadow-light-black;
+
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 12px darken(@ma-shadow-light-black, 8%);
+    }
 
     & + & {
         margin-top: 8px;
@@ -18,7 +24,7 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
 
-        background-color: @main-blue;
+        background-color: @ma-main-blue;
         cursor: pointer;
 
         &:hover .header-login__extension {
@@ -42,7 +48,7 @@
             display: block;
             width: 100%;
             height: 1px;
-            background-color: @bg-light-gray;
+            background-color: @ma-bg-light-gray;
             margin: 7px 0 15px;
         }
     }
