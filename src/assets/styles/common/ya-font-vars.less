@@ -17,72 +17,58 @@
 
 @ya-font-normal-style: normal;
 
+.ya-font-general(@font-size; @font-weight; @font-style) {
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
 .ya-font-base() {
     font-family: @ya-font-family-main;
-    font-weight: @ya-font-regular-weight;
-    font-style: @ya-font-normal-style;
-    font-size: @ya-font-regular-size;
+    .ya-font-general(@ya-font-regular-size; @ya-font-regular-weight; @ya-font-normal-style);
 }
 
 .ya-font-standard() {
     .ya-font-base();
-    font-size: @ya-font-normal-size;
-    font-weight: @ya-font-regular-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-normal-size; @ya-font-regular-weight; @ya-font-normal-style);
 }
 
 .ya-font-standard-medium() {
     .ya-font-base();
-    font-size: @ya-font-normal-size;
-    font-weight: @ya-font-medium-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-normal-size; @ya-font-medium-weight; @ya-font-normal-style);
 }
 
 .ya-font-standard-bold() {
     .ya-font-base();
-    font-size: @ya-font-normal-size;
-    font-weight: @ya-font-bold-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-normal-size; @ya-font-bold-weight; @ya-font-normal-style);
 }
 
 .ya-font-regular() {
     .ya-font-base();
-    font-size: @ya-font-regular-size;
-    font-weight: @ya-font-regular-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-regular-size; @ya-font-regular-weight; @ya-font-normal-style);
 }
 
 .ya-font-regular-medium() {
     .ya-font-base();
-    font-size: @ya-font-regular-size;
-    font-weight: @ya-font-medium-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-regular-size; @ya-font-medium-weight; @ya-font-normal-style);
 }
 
 .ya-font-primary() {
     .ya-font-base();
-    font-size: @ya-font-medium-size;
-    font-weight: @ya-font-regular-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-medium-size; @ya-font-regular-weight; @ya-font-normal-style);
 }
 
 .ya-font-primary-medium() {
     .ya-font-base();
-    font-size: @ya-font-medium-size;
-    font-weight: @ya-font-medium-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-medium-size; @ya-font-medium-weight; @ya-font-normal-style);
 }
 
 .ya-font-large() {
     .ya-font-base();
-    font-size: @ya-font-large-size;
-    font-weight: @ya-font-regular-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-large-size; @ya-font-regular-weight; @ya-font-normal-style);
 }
 
 .ya-font-large-bold() {
     .ya-font-base();
-    font-size: @ya-font-large-size;
-    font-weight: @ya-font-medium-weight;
-    font-style: @ya-font-normal-style;
+    .ya-font-general(@ya-font-large-size; @ya-font-medium-weight; @ya-font-normal-style);
 }

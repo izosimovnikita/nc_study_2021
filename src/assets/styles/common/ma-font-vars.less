@@ -14,51 +14,43 @@
 
 @ma-font-normal-style: normal;
 
+.ma-font-general(@font-size; @font-weight; @font-style) {
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
 .ma-font-base() {
     font-family: @ma-font-family-main;
-    font-size: @ma-font-main-size;
-    font-weight: @ma-font-regular-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-main-size; @ma-font-regular-weight; @ma-font-normal-style);
 }
 
 .ma-font-petty() {
     .ma-font-base();
-    font-size: @ma-font-petty-size;
-    font-weight: @ma-font-regular-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-petty-size; @ma-font-regular-weight; @ma-font-normal-style);
 }
 
 .ma-font-petty-bolder() {
     .ma-font-base();
-    font-size: @ma-font-petty-size;
-    font-weight: @ma-font-bolder-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-petty-size; @ma-font-bolder-weight; @ma-font-normal-style);
 }
 
 .ma-font-secondary() {
     .ma-font-base();
-    font-size: @ma-font-secondary-size;
-    font-weight: @ma-font-regular-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-secondary-size; @ma-font-regular-weight; @ma-font-normal-style);
 }
 
 .ma-font-regular() {
     .ma-font-base();
-    font-size: @ma-font-main-size;
-    font-weight: @ma-font-regular-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-main-size; @ma-font-regular-weight; @ma-font-regular-weight);
 }
 
 .ma-font-regular-bolder() {
     .ma-font-base();
-    font-size: @ma-font-main-size;
-    font-weight: @ma-font-bolder-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-main-size; @ma-font-bolder-weight; @ma-font-normal-style);
 }
 
 .ma-font-big() {
     .ma-font-base();
-    font-size: @ma-font-big-size;
-    font-weight: @ma-font-bolder-weight;
-    font-style: @ma-font-normal-style;
+    .ma-font-general(@ma-font-big-size; @ma-font-bolder-weight; @ma-font-normal-style);
 }
