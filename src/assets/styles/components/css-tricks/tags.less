@@ -1,0 +1,19 @@
+.tr-tags {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: .5rem;
+
+    &__link {
+        .tr-font-pettier();
+        color: @tr-orange-color;
+
+        & + & {
+            margin-left: .66rem;
+        }
+
+        &:hover {
+            color: lighten(@tr-orange-color, 15%);
+        }
+    }
+}

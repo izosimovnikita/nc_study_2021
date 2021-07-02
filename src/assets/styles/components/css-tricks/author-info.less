@@ -1,0 +1,17 @@
+.tr-author-info {
+    .tr-font-content();
+    font-family: @tr-font-family-secondary;
+    color: lighten(@tr-gray-text-color, 16%);
+
+    &__name {
+        font-weight: @tr-font-medium-weight;
+
+        &:hover {
+            opacity: .66;
+        }
+
+        &._card-author {
+            color: @normal-white;
+        }
+    }
+}

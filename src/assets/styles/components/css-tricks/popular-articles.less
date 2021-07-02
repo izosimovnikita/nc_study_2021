@@ -1,0 +1,29 @@
+.tr-popular-articles {
+    &__header-popular {
+        flex: 0 0 250px;
+
+        margin-right: 1rem;
+        margin-top: 3.2rem;
+    }
+
+    &__mini-cards {
+        padding: 3rem 0 3rem 2rem;
+
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #434343;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 2px @tr-scroll-black1, inset -2px -2px 2px @tr-scroll-black2;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: @tr-gorizontal-scroll-black3;
+        }
+    }
+}

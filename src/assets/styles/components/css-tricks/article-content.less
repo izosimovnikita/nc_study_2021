@@ -1,0 +1,17 @@
+.tr-article-content {
+    &__tr-tags {
+        display: flex;
+        flex-direction: row;
+
+        color: @tr-title-black;
+    }
+
+    &__text-content {
+        margin-bottom: 1.5rem;
+
+        .tr-font-content();
+        font-family: @tr-font-family-secondary;
+        line-height: 1.7;
+        color: lighten(@tr-gray-text-color, 13%);
+    }
+}

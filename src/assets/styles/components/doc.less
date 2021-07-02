@@ -1,5 +1,21 @@
 .doc {
     &._tr-doc {
         .tr-font-base();
+
+
+        &::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: @tr-gray-text-color;
+            border-radius: 16px;
+            box-shadow: inset 2px 2px 2px @tr-scroll-black1, inset -2px -2px 2px @tr-scroll-black2;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: @tr-scroll-black3;
+        }
     }
 }

@@ -1,5 +1,5 @@
 @tr-font-family-main: "GothamNarr"  ;
-@tr-font-family-secondary: "Sentitel", sans-serif;
+@tr-font-family-secondary: "Sentitel";
 
 @tr-font-tags-size: .66rem;
 @tr-font-petty-size: .8rem;
@@ -8,12 +8,14 @@
 @tr-font-content-size: 1.2rem;
 @tr-font-card-title-size: 1.3rem;
 @tr-font-medium-size: 1.8rem;
+@tr-font-pre-big-size: 2rem;
 @tr-font-big-size: 2.5rem;
 
 @tr-font-regular-weight: 400;
 @tr-font-medium-weight: 500;
 @tr-font-bold-weight: 600;
 @tr-font-bolder-weight: 700;
+@tr-font-pre-black-weight: 800;
 @tr-font-black-weight: 900;
 
 @tr-font-normal-style: normal;
@@ -29,7 +31,55 @@
     .tr-font-general(@tr-font-main-size; @tr-font-regular-weight; @tr-font-normal-style);
 }
 
+.tr-font-pettier() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-tags-size; @tr-font-pre-black-weight; @tr-font-normal-style);
+}
+
 .tr-font-petty() {
+    .tr-font-base();
     .tr-font-general(@tr-font-petty-size; @tr-font-medium-weight; @tr-font-normal-style)
 }
+
+.tr-font-content() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-content-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-medium() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-medium-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-medium-pre-black() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-medium-size; @tr-font-pre-black-weight; @tr-font-normal-style);
+}
+
+.tr-font-pre-big() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-pre-big-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-pre-big-pre-black() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-pre-big-size; @tr-font-pre-black-weight; @tr-font-normal-style);
+}
+
+.tr-font-big() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-big-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-big-bolder() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-big-size; @tr-font-bolder-weight; @tr-font-normal-style);
+}
+
+.tr-font-card() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-card-title-size; @tr-font-pre-black-weight; @tr-font-normal-style);
+}
+
+
 
