@@ -38,6 +38,18 @@
     padding: 4px 10px 0 10px;
   }
 
+  &__tr-header {
+    margin-bottom: var(--gap);
+
+    &:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: @tr-linear-gradient-colored;
+    }
+  }
+
   &._ma-mark {
     .ma-font-base();
 
@@ -55,6 +67,7 @@
   }
 
   &._tr-mark {
-    .tr-font-base();
+    background-color: @tr-bg-color;
+    color: @normal-white;
   }
 }

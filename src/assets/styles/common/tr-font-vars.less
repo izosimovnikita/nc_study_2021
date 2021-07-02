@@ -1,11 +1,14 @@
-@tr-font-family-main: "GothamNarr", sans-serif;
+@tr-font-family-main: "GothamNarr"  ;
 @tr-font-family-secondary: "Sentitel", sans-serif;
 
-@tr-font-petty-size: 11px;
-@tr-font-secondary-size: 13px;
+@tr-font-tags-size: .66rem;
+@tr-font-petty-size: .8rem;
+@tr-font-secondary-size: .85rem;
 @tr-font-main-size: 15px;
-@tr-font-btn-size: 17px;
-@tr-font-big-size: 24px;
+@tr-font-content-size: 1.2rem;
+@tr-font-card-title-size: 1.3rem;
+@tr-font-medium-size: 1.8rem;
+@tr-font-big-size: 2.5rem;
 
 @tr-font-regular-weight: 400;
 @tr-font-medium-weight: 500;
@@ -24,5 +27,9 @@
 .tr-font-base() {
     font-family: @tr-font-family-main;
     .tr-font-general(@tr-font-main-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-petty() {
+    .tr-font-general(@tr-font-petty-size; @tr-font-medium-weight; @tr-font-normal-style)
 }
 
