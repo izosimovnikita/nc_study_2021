@@ -1,0 +1,47 @@
+.tr-list-item {
+    .tr-font-main();
+    font-family: @tr-font-family-secondary;
+    line-height: 1.7;
+    color: @tr-light-gray-color;
+
+    overflow: hidden;
+
+    &__link {
+        position: relative;
+
+        margin-right: .2rem;
+
+        color: @tr-light-gray-color;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: @normal-white;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateX(-101%);
+            visibility: hidden;
+
+            width: 100%;
+            height: 1px;
+
+            background-color: @normal-white;
+
+            transition: .2s;
+        }
+    }
+
+    &__add {
+        opacity: .5;
+    }
+}

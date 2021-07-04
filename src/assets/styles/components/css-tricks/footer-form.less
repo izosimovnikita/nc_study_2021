@@ -1,0 +1,23 @@
+.tr-footer-form {
+    position: relative;
+
+    margin-top: -3.2rem;
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+
+    background: @tr-gray-text-color;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 48px;
+
+        position: absolute;
+        top: 0;
+        right: 100%;
+
+        background-color: @tr-light-gray-color;
+        clip-path: polygon(100% 0,100% 100%,0 100%);
+    }
+}

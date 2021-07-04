@@ -1,6 +1,8 @@
 .tr-main-nav {
     display: flex;
 
+    position: relative;
+
     &__tr-header-nav {
         display: flex;
     }
@@ -8,5 +10,10 @@
     &__tr-nav-actions {
         display: flex;
         align-items: center;
+
+        position: fixed;
+        right: var(--gap);
+        top: 9px;
+        z-index: 15;
     }
 }

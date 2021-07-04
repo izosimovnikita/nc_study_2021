@@ -15,11 +15,14 @@
 }
 
 .search-icon,
-.account-icon {
+.account-icon,
+.arrow-up-icon {
     .icon-size(32px; 32px);
     fill: @normal-white;
 
     cursor: pointer;
+
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
 
     &:hover {
         opacity: .66;
@@ -29,3 +32,17 @@
 .account-icon {
     margin-left: .8rem;
 }
+
+.arrow-up-icon {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 20px;
+    z-index: @tr-zindex-actions;
+}
+
+.star-icon {
+    .icon-size(120px; 120px);
+
+    fill: @tr-red-color;
+}
+
