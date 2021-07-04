@@ -1,0 +1,24 @@
+.tr-advert-content {
+    position: relative;
+    z-index: 4;
+
+    padding: 1.5rem;
+
+    border-radius: 0 0 8px 8px;
+
+    color: @tr-default-black;
+    background: @normal-white;
+
+    &__title {
+        margin-bottom: .8rem;
+
+        .tr-font-content-bolder();
+        line-height: 1.1;
+    }
+
+    &__text {
+        .tr-font-secondary();
+        font-family: @tr-font-family-secondary;
+        line-height: 1.7;
+    }
+}

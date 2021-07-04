@@ -1,5 +1,5 @@
 .tr-article-content {
-    &__tr-tags {
+    &__tags {
         display: flex;
         flex-direction: row;
 
@@ -13,5 +13,12 @@
         font-family: @tr-font-family-secondary;
         line-height: 1.7;
         color: lighten(@tr-gray-text-color, 13%);
+    }
+
+    &._content-article {
+        position: relative;
+        z-index: 5;
+
+        padding: 1.5rem;
     }
 }

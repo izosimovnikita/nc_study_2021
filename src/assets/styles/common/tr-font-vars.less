@@ -38,12 +38,22 @@
 
 .tr-font-petty() {
     .tr-font-base();
-    .tr-font-general(@tr-font-petty-size; @tr-font-medium-weight; @tr-font-normal-style)
+    .tr-font-general(@tr-font-petty-size; @tr-font-medium-weight; @tr-font-normal-style);
+}
+
+.tr-font-secondary() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-secondary-size; @tr-font-regular-weight; @tr-font-normal-style);
 }
 
 .tr-font-content() {
     .tr-font-base();
     .tr-font-general(@tr-font-content-size; @tr-font-regular-weight; @tr-font-normal-style);
+}
+
+.tr-font-content-bolder() {
+    .tr-font-base();
+    .tr-font-general(@tr-font-content-size; @tr-font-bolder-weight; @tr-font-normal-style);
 }
 
 .tr-font-medium() {

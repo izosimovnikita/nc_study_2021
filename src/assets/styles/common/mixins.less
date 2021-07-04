@@ -10,6 +10,18 @@
 }
 
 .icon-size(@width; @height) {
-  width: @width;
-  height: @height;
+    width: @width;
+    height: @height;
+}
+
+.gradient-border() {
+    content: "";
+    background: @tr-linear-gradient-colored;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    z-index: 1;
+    border-radius: 12px;
 }

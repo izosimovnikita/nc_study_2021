@@ -1,14 +1,20 @@
 .tr-article {
-    display: grid;
-    grid-template-columns: 50% 50%;
     position: relative;
     z-index: 0;
 
     border-radius: 8px;
 
+    color: @tr-gray-text-color;
     background: @normal-white;
 
-    &__tr-image-preview {
+    &._large-article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+
+
+    &__image-preview {
         background: url("https://css-tricks.com/wp-content/uploads/2020/07/woocommerce-poster.png") center;
         background-size: cover;
         object-fit: cover;
@@ -18,6 +24,8 @@
         height: 100%;
 
         border-radius: 8px 0 0 8px;
+
+        cursor: pointer;
 
         &:before {
             pointer-events: none;
@@ -35,8 +43,33 @@
     }
 
     &__content {
-        padding: 3rem;
         display: flex;
         flex-direction: column;
+
+        padding: 3rem;
+    }
+
+    &__image-post {
+        background: url("https://i1.wp.com/css-tricks.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-22-at-12.45.34-PM.png?resize=1000%2C1097&ssl=1") center;
+        background-size: cover;
+        height: 250px;
+        width: 100%;
+
+        border-radius: 8px 8px 0 0;
+
+        &:after {
+            pointer-events: none;
+            content: "";
+            background: @tr-linear-gradient-colored;
+            mix-blend-mode: screen;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 8px;
+        }
     }
 }

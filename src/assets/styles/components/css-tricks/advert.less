@@ -1,0 +1,24 @@
+.tr-advert {
+    position: relative;
+
+    border-radius: 8px;
+
+    background: @tr-default-black;
+    color: @normal-white;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: @tr-default-black;
+        z-index: 2;
+        border-radius: 8px;
+    }
+
+    &:before {
+        .gradient-border();
+    }
+}

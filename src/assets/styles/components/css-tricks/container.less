@@ -12,6 +12,8 @@
         flex-direction: row;
         position: relative;
 
+        margin-bottom: var(--gap);
+
         &:after {
             content: "";
             position: absolute;
@@ -20,8 +22,14 @@
             bottom: 3.6rem;
             width: 5px;
             border-radius: 5px;
-            background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+            background: @tr-linear-gradient-colored;
             box-shadow: -10px 0 20px 3px #000;
         }
     }
+
+   &__articles-and-sidebar {
+       display: grid;
+       grid-template-columns: minmax(0, 1fr) 300px;
+       gap: var(--gap);
+   }
 }
