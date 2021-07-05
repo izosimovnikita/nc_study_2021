@@ -2,6 +2,7 @@ let cross =   document.getElementById('tr-burger-cross');
 let menu =    document.getElementById('tr-burger-list');
 let arrowUp = document.getElementById('scroll-top');
 let advert =  document.getElementById('tr-sidebar');
+let star =  document.getElementById('star-icon');
 
 cross.addEventListener('click', function () {
     menu.classList.toggle('menu-active');
@@ -35,6 +36,12 @@ window.addEventListener('scroll', function () {
     } else {
         advert.style.visibility = 'hidden';
         advert.style.opacity = '0';
+    }
+
+    if (this.pageYOffset === 0) {
+        star.style.transform = 'rotate(1260deg)';
+    } else {
+        star.style.transform = 'rotate(0)';
     }
 })
 
