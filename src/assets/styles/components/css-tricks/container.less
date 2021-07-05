@@ -1,6 +1,10 @@
 .tr-container {
     padding: 0 var(--gap);
 
+    &__link {
+        display: flex;
+    }
+
     &__tr-main-nav {
         display: flex;
         flex: 1;
@@ -23,7 +27,7 @@
             width: 5px;
             border-radius: 5px;
             background: @tr-linear-gradient-colored;
-            box-shadow: -10px 0 20px 3px #000;
+            box-shadow: -10px 0 20px 3px @tr-default-black;
         }
     }
 
@@ -39,5 +43,29 @@
         gap: 1rem;
 
         padding-top: 1.5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        &__articles-and-sidebar {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        &__link {
+            padding: .8rem 0;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        &__footer-links {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__popular-articles:after {
+            display: none;
+        }
     }
 }

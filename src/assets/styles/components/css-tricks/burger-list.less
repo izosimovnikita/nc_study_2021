@@ -1,0 +1,35 @@
+.tr-burger-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    transform: translateY(-150%);
+
+    padding: 1rem 0;
+    border-radius: 4px;
+
+    background: @tr-linear-gradient-colored;
+
+    text-align: center;
+    .tr-font-pre-medium();
+
+    box-shadow: 0 0 10px @tr-default-black;
+    transition: transform .4s ease-in-out;
+
+    &.menu-active {
+        transform: translateY(50px);
+    }
+
+    &__item {
+        color: @normal-white;
+        text-shadow: 2px 2px 2px @tr-default-black;
+
+        &:hover {
+            opacity: .66;
+        }
+    }
+}

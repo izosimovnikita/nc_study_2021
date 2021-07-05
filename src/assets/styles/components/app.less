@@ -72,7 +72,15 @@
   }
 
   &._tr-mark {
+    position: relative;
+
     background-color: @tr-bg-color;
     color: @normal-white;
+  }
+
+  @media screen and (max-width: 800px) {
+    &__tr-footer {
+      margin-top: 20rem;
+    }
   }
 }

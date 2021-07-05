@@ -12,8 +12,6 @@
         grid-template-columns: 50% 50%;
     }
 
-
-
     &__image-preview {
         background: url("https://css-tricks.com/wp-content/uploads/2020/07/woocommerce-poster.png") center;
         background-size: cover;
@@ -72,4 +70,34 @@
             border-radius: 8px;
         }
     }
+
+    @media screen and (max-width: 800px) {
+        & {
+            &._large-article {
+                grid-template-columns: 1fr;
+            }
+
+            &__image-preview {
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+                max-height: 200px;
+
+                border-radius: 8px 8px 0 0;
+            }
+
+            &__content {
+                padding: 1.5rem;
+                font-size: @tr-font-pre-big-size;
+                line-height: .9rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__content {
+            font-size: @tr-font-pre-medium-size;
+        }
+    }
 }
+

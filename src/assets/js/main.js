@@ -47,3 +47,14 @@ input.addEventListener("blur", function () {
     } else actions.style.opacity = "1";
 })
 
+
+// CSS-Tricks
+// Burger
+let cross = document.getElementById('tr-burger-cross');
+let menu = document.getElementById('tr-burger-list');
+
+cross.addEventListener('click', function () {
+    menu.classList.add('active');
+    console.log('click')
+})
+

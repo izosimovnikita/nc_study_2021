@@ -7,6 +7,14 @@
         position: absolute;
         top: -90px;
         left: var(--gap);
-        z-index: -3;
+        z-index: @tr-zindex-icon;
+    }
+
+    @media screen and (max-width: 830px) {
+        &__icon {
+            top: -140px;
+            left: auto;
+            right: var(--gap);
+        }
     }
 }
