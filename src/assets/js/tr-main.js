@@ -1,6 +1,7 @@
 let cross =   document.getElementById('tr-burger-cross');
 let menu =    document.getElementById('tr-burger-list');
 let arrowUp = document.getElementById('scroll-top');
+let advert =  document.getElementById('tr-sidebar');
 
 cross.addEventListener('click', function () {
     menu.classList.toggle('menu-active');
@@ -27,8 +28,17 @@ window.addEventListener('scroll', function () {
         arrowUp.style.visibility = 'hidden';
         arrowUp.style.opacity = '0';
     }
+
+    if (this.pageYOffset > 1050) {
+        advert.style.visibility = 'visible';
+        advert.style.opacity = '1';
+    } else {
+        advert.style.visibility = 'hidden';
+        advert.style.opacity = '0';
+    }
 })
 
 arrowUp.addEventListener('click', function () {
     window.scrollTo(0, 0)
 })
+
