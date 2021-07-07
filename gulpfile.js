@@ -118,7 +118,8 @@ gulp.task("serve", function () {
 	gulp.watch("./dist/ya-index.html").on("change", browserSync.reload);
 	gulp.watch("./dist/ma-index.html").on("change", browserSync.reload);
 	gulp.watch("./dist/tr-index.html").on("change", browserSync.reload);
-    gulp.watch("./dist/main.js").on("change", browserSync.reload);
+    gulp.watch("./dist/tr-main.js").on("change", browserSync.reload);
+    gulp.watch("./dist/ya-main.js").on("change", browserSync.reload);
 	gulp.watch("./src/assets/icons/**/*.svg").on("change", browserSync.reload);
 });
 

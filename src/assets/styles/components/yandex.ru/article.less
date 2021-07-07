@@ -1,0 +1,37 @@
+.ya-article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    padding: 4px;
+    border-radius: 8px;
+
+    box-shadow: 0 0 4px @ya-default-black;
+
+    &:hover {
+        box-shadow: 0 0 7px @ya-default-black;
+    }
+
+    &__header-article {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 10px;
+    }
+
+    &__footer-article {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .action-icon {
+        .icon-size(24px; 24px);
+
+        &:hover {
+            opacity: .66;
+        }
+    }
+}
