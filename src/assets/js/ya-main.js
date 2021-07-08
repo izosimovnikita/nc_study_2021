@@ -70,21 +70,15 @@ let articlesNumber = 0;
     articles = await getJson(url);
 
     await showArticles();
-    // container.append(createRowArticles(dataMain[1], dataMain[2]));
+
+    window.addEventListener('scroll', () => {
+        const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+        if (clientHeight + scrollTop >= scrollHeight - 1) {
+            showArticles();
+        }
+    })
 })()
-
-async function getJson(url) {
-    const response = await fetch('https://obscure-scrubland-30498.herokuapp.com/' + url);
-    if (response.ok) {
-        let json = await response.json();
-        return json.items;
-    } else throw new Error(`${response.status}: ${response.statusText}`);
-}
-
-const loading = document.getElementById('loading');
-const container = document.getElementById('dzen-container');
-const $root = document.getElementById('dzen');
-$root.append(container);
 
 async function showArticles(count = 10) {
     loading.classList.add('show');
@@ -103,16 +97,38 @@ async function showArticles(count = 10) {
 
         articlesNumber++;
     } while (articlesCount !== count);
-
 }
 
-window.addEventListener('scroll', () => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+function debounce (fn, ms) {
+    let during = false;
 
-    if (clientHeight + scrollTop >= scrollHeight - 5) {
-        showArticles();
-    }
-})
+    return function (...args) {
+        if (during) return;
+
+        fn.apply(this, args);
+
+        during = true;
+
+        setTimeout(() => during = false, ms);
+    };
+}
+
+showArticles = debounce(showArticles,  300);
+
+async function getJson(url) {
+    const response = await fetch('https://obscure-scrubland-30498.herokuapp.com/' + url);
+    if (response.ok) {
+        let json = await response.json();
+        return json.items;
+    } else throw new Error(`${response.status}: ${response.statusText}`);
+}
+
+const loading = document.getElementById('loading');
+const container = document.getElementById('dzen-container');
+const $root = document.getElementById('dzen');
+$root.append(container);
+
+
 
 const createArticle = (item) => {
     const article = document.createElement('div');
