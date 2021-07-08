@@ -74,7 +74,7 @@ let articlesNumber = 0;
     window.addEventListener('scroll', () => {
         const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-        if (clientHeight + scrollTop >= scrollHeight - 1) {
+        if (clientHeight + scrollTop >= scrollHeight - 5) {
             showArticles();
         }
     })
