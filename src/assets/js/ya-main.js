@@ -69,7 +69,7 @@ let articlesNumber = 0;
 (async function mainFunc() {
     articles = await getJson(url);
 
-    await showArticles();
+    showArticles();
 
     window.addEventListener('scroll', () => {
         const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -127,8 +127,6 @@ const loading = document.getElementById('loading');
 const container = document.getElementById('dzen-container');
 const $root = document.getElementById('dzen');
 $root.append(container);
-
-
 
 const createArticle = (item) => {
     const article = document.createElement('div');
