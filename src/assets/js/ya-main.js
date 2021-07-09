@@ -65,6 +65,8 @@ input.addEventListener("blur", function () {
 const url = 'https://zen.yandex.ru/api/v3/launcher/export?clid=300&country_code=ru';
 let articles;
 let articlesNumber = 0;
+const loading = document.getElementById('loading');
+loader(true);
 
 (async function mainFunc() {
     articles = await getJson(url);
@@ -80,8 +82,16 @@ let articlesNumber = 0;
     })
 })()
 
+function loader(on) {
+    if (on) {
+        loading.classList.add('show');
+    } else {
+        loading.classList.remove('show');
+    }
+}
+
 async function showArticles(count = 10) {
-    loading.classList.add('show');
+    loader(true);
     let articlesCount = 0;
 
     do {
@@ -123,7 +133,6 @@ async function getJson(url) {
     } else throw new Error(`${response.status}: ${response.statusText}`);
 }
 
-const loading = document.getElementById('loading');
 const container = document.getElementById('dzen-container');
 const $root = document.getElementById('dzen');
 $root.append(container);
@@ -136,7 +145,7 @@ const createArticle = (item) => {
     article.append(createContent(item));
     article.append(createFooter(item));
 
-    loading.classList.remove('show');
+    loader(false);
     container.append(article);
 }
 
